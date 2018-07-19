@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
   entry: './src/main.js',
@@ -37,7 +38,10 @@ module.exports = {
     new ExtractTextPlugin("./styles.[hash].css"),
     new CopyWebpackPlugin([
       { from: __dirname + "/src/public/", to: "./" }
-    ])
+    ]),
+    new WorkboxPlugin.InjectManifest({
+      swSrc: __dirname + '/src/public/sw.js',
+    })
   ],
   devServer: {
     contentBase: './src/public',

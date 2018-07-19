@@ -7,48 +7,29 @@ if (workbox) {
     console.log(`Boo! Workbox didn't load 😬`);
 }
 
-workbox.precaching.precacheAndRoute([
-    '/',
-    '/index.html',
-    '/assets/img/r2d2.jpg'
-]);
+workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
 
-// workbox.routing.registerRoute(
-//     // Cache HTML files
-//     new RegExp('.*\.html'),
-//     workbox.strategies.networkFirst()
-// );
+workbox.routing.registerRoute(
+    // Cache HTML files
+    new RegExp('.*\.html'),
+    workbox.strategies.networkFirst()
+);
 
-// workbox.routing.registerRoute(
-//     // Cache JS files
-//     new RegExp('.*\.js'),
-//     workbox.strategies.networkFirst()
-// );
 
-// workbox.routing.registerRoute(
-//     // Cache CSS files
-//     /.*\.css/,
-//     // Use cache but update in the background ASAP
-//     workbox.strategies.staleWhileRevalidate({
-//         // Use a custom cache name
-//         cacheName: 'css-cache',
-//     })
-// );
-
-// workbox.routing.registerRoute(
-//     // Cache static files
-//     /.*\.(?:|jpg|mp3)/,
-//     // Use the cache if it's available
-//     workbox.strategies.cacheFirst({
-//         // Use a custom cache name
-//         cacheName: 'static-cache',
-//         plugins: [
-//             new workbox.expiration.Plugin({
-//                 // Cache only 40 static items
-//                 maxEntries: 40,
-//                 // Cache for a maximum of a week
-//                 maxAgeSeconds: 7 * 24 * 60 * 60,
-//             })
-//         ],
-//     })
-// );
+workbox.routing.registerRoute(
+    // Cache static files
+    /.*\.(?:|jpg|mp3)/,
+    // Use the cache if it's available
+    workbox.strategies.cacheFirst({
+        // Use a custom cache name
+        cacheName: 'static-cache',
+        plugins: [
+            new workbox.expiration.Plugin({
+                // Cache only 40 static items
+                maxEntries: 40,
+                // Cache for a maximum of a week
+                maxAgeSeconds: 7 * 24 * 60 * 60,
+            })
+        ],
+    })
+);
