@@ -1,10 +1,7 @@
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox-sw.js');
 
-// Check when the SW is Installed
-self.addEventListener('install', function (event) {
-    console.log('[Service Worker] Install');
-})
-
-// Check when the SW is Activated
-self.addEventListener('activate', function (event) {
-    console.log('[Service Worker] Activate');
-})
+if (workbox) {
+    console.log(`Yay! Workbox is loaded 🎉`);
+} else {
+    console.log(`Boo! Workbox didn't load 😬`);
+}
