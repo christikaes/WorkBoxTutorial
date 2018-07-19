@@ -1,0 +1,59 @@
+{
+    "characters": {
+        "r2d2": [
+            "r2d2_1",
+            "r2d2_2",
+            "r2d2_3",
+            "r2d2_4"
+        ],
+        "vader": [
+            "vader_1",
+            "vader_2",
+            "vader_3",
+            "vader_4"
+        ],
+        "chewy": [
+            "chewy_1",
+            "chewy_2"
+        ],
+        "leia": [
+            "leia_1",
+            "leia_2",
+            "leia_3"
+        ],
+        "yoda": [
+            "yoda_1",
+            "yoda_2",
+            "yoda_3"
+        ],
+        "maul": [
+            "maul_1"
+        ],
+        "luke": [
+            "luke_1",
+            "luke_2"
+        ],
+        "obiwan": [
+            "obiwan_1",
+            "saber_1",
+            "saber_2",
+            "saber_3"
+        ],
+        "bobafett": [
+            "saber_1",
+            "saber_2",
+            "saber_3"
+        ],
+        "trooper": [
+            "blaster_1"
+        ],
+        "c3po": [
+            "theme"
+        ],
+        "solo": [
+            "saber_1",
+            "saber_2",
+            "saber_3"
+        ]
+    }
+}

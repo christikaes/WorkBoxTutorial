@@ -1,0 +1,23 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #3b3b3b;
+    text-align: center;
+}
+
+.characters img {
+    width: 500px;
+    height: 380px;
+    transition: transform ease-in-out 300ms;
+}
+
+.characters img:hover {
+    cursor: pointer;
+    transform: scale(0.9);
+}
+
+.characters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
