@@ -22,3 +22,14 @@ export const setup = async () => {
         playSound(characterName);
     })
 }
+
+// Register serviceworker
+export const registerServiceWorker = () => {
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+            .register('/sw.js')
+            .then(() => {
+                console.log("[Service Worker] Registered");
+            })
+    }
+}
